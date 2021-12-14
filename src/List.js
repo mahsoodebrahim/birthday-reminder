@@ -8,9 +8,12 @@ const List = ({ people }) => {
         return (
           <article className="person" key={id}>
             <img src={image} alt={name} />
-            <div>
-              <h4>{name}</h4>
-              <p>{age} years</p>
+            <div className="two-col">
+              <div>
+                <h4>{name}</h4>
+                <p>{age} years</p>
+              </div>
+              <button className="remove-btn">x</button>
             </div>
           </article>
         );
