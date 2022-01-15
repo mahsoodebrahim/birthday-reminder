@@ -1,6 +1,6 @@
 import React from "react";
 
-const List = ({ people }) => {
+const List = ({ people, handleRemoveBtn }) => {
   return (
     <>
       {people.map((person) => {
@@ -13,7 +13,12 @@ const List = ({ people }) => {
                 <h4>{name}</h4>
                 <p>{age} years</p>
               </div>
-              <button className="remove-btn">x</button>
+              <button
+                className="remove-btn"
+                onClick={() => handleRemoveBtn(id)}
+              >
+                x
+              </button>
             </div>
           </article>
         );
