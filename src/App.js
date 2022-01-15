@@ -17,7 +17,13 @@ function App() {
       <section className="container">
         <h3>{people.length} birthdays today</h3>
         <List people={people} handleRemoveBtn={handleRemoveBtn} />
-        <button onClick={() => setPeople([])}>clear all</button>
+        <button
+          className={`${people.length === 0 && "btn-disabled"}`}
+          onClick={() => setPeople([])}
+        >
+          clear all
+        </button>
+        <button onClick={() => setPeople(data)}>reset</button>
       </section>
     </main>
   );

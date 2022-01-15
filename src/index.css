@@ -190,6 +190,12 @@ main {
   cursor: pointer;
 }
 
+.container .btn-disabled {
+  cursor: not-allowed;
+  background-color: var(--clr-grey-4);
+  outline: var(--clr-grey-4);
+}
+
 .two-col {
   display: flex;
   align-items: center;
